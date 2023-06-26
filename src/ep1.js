@@ -1,7 +1,11 @@
-const newArr = [100, 200, 300];
-const data = [10, 20, ...newArr];
-const colors = ["Green", "Blue", "White"];
-const allColors = ["Red", "Yallow",...colors];
-const newColors=['Black','Gay']
-allColors.push(...newColors)
-console.log(allColors);
+// summation = (x, y) => x + y;
+// summation = (x, y, z) => x + y + z;
+// const summation = (x, y, z) => (z != undefined ? x + y + z : x + y);
+const summation = (...numberArr) => {
+  let total = 0;
+  for (let number of numberArr) total += number;
+  return total;
+};
+
+// console.log(summation(50, 100));
+console.log(summation(500, 100, 50, 400, 50, 100, 250, 50));
