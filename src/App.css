@@ -3,6 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+h1{
+  color: greenyellow;
+}
+h2{
+  color: rgb(42, 228, 197);
+}
 /* #root {
   max-width: 1280px;
   margin: 0 auto;
