@@ -1,7 +1,7 @@
-let customerName = "Phatsakorn";
-let customerAddress = "55/55 Roust66 Aumper City Povice Bangkok";
-let tal = "012-1121111";
-const address = `Customer Name: ${customerName}
-  Address: ${customerAddress}
-  Tel: ${tal} `;
-console.log(address);
+const newArr = [100, 200, 300];
+const data = [10, 20, ...newArr];
+const colors = ["Green", "Blue", "White"];
+const allColors = ["Red", "Yallow",...colors];
+const newColors=['Black','Gay']
+allColors.push(...newColors)
+console.log(allColors);
