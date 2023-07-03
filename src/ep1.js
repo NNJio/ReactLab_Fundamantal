@@ -1,8 +1,12 @@
-let getDataCustomer = (customerName = "Null", customerAddress = "Null") => {
-  const address = `Customer Name: ${customerName}
-    Address: ${customerAddress}`;
-  return address;
-};
+const data = [100, 200, 300];
+const data2 = [400, 500];
 
-console.log(getDataCustomer("Bankok"));
-console.log(getDataCustomer("Naneee"));
+// console.log(data);
+//! join
+// const result = data.join()
+// const result = data.join("*");
+// console.log(result);
+// console.log(data.join());
+//! concat
+const allData = data.concat(data2)
+console.log(allData);
