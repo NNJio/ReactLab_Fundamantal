@@ -1,0 +1,16 @@
+.item-list{
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.item-list li{
+    background: black;
+    box-shadow: 0 1 px 3 px white;
+    padding: 15px;
+    color: bisque;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    position: relative;
+}
