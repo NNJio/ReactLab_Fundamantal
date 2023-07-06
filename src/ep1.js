@@ -1,29 +1,15 @@
-//! Map number
-// const numbers = [10, 20, 30, 40];
-// console.log(`Array Number = ${numbers}`);
-// const result = numbers.map((e) => e * 2);
-// console.log(`Array Map = ${result}`);
-//! Map String
-// const data = [
-//   "rain",
-//   "sun",
-//   "storm",
-//   "very sun",
-//   "hard rain",
-//   "good",
-//   "cloudy",
-// ];
-
-// console.log(`All day Weater = ${data}`);
-// const result = data.map((e, i) => {
-//   return `Day ${i + 1} weater is ${e}`;
-// });
-// console.log(result);
-//! Map Objects
+// const data = [10, 20, 30, 40];
 const data = [
-  { day: "01/06/2564", weather: "Sun", tem: 37 },
-  { day: "02/06/2564", weather: "Rain", tem: 27 },
-  { day: "03/06/2564", weather: "Cloudy", tem: 22 },
+  { name: "New", salary: 28000, departmaent: "dav" },
+  { name: "Jo", salary: 21000, departmaent: "market" },
+  { name: "Nut", salary: 22000, departmaent: "dav" },
+  { name: "Bell", salary: 23000, departmaent: "dav" },
+  { name: "Joy", salary: 24000, departmaent: "dav" },
 ];
-const result = data.map((e) => e.weather);
-console.log(result);
+const result = data.filter(e=>e.salary>20000).filter(e=>e.departmaent=='market')
+console.log(result)
+
+
+//! Array Filter
+// const result = data.filter((e) => e > 20);
+// console.log(result)
