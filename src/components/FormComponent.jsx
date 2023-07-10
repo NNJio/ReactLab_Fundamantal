@@ -1,21 +1,38 @@
+import { useState } from "react";
 import "./FormComponent.css";
 const FormComponent = () => {
+  const [title, setTitle] = useState("");
+  const [amount, setAmount] = useState(0);
+
   const inputTitle = (event) => {
-    console.log(event.target.value);
+    setTitle(event.target.value);
+    // console.log(event.target.value);
   };
   const inputAmount = (event) => {
-    console.log(event.target.value);
+    setAmount(event.target.value);
+    // console.log(event.target.value);
   };
   const saveItem = (event) => {
     event.preventDefault();
-    console.log("Success");
+    const itemData = {
+      title: title,
+      amount: Number(amount),
+    };
+    console.log(itemData);
+    setTitle("");
+    setAmount(0);
   };
   return (
     <div>
       <form onSubmit={saveItem}>
         <div className="form-control">
           <label>Title</label>
-          <input type="Text" placeholder="Input Title" onChange={inputTitle} />
+          <input
+            type="Text"
+            placeholder="Input Title"
+            onChange={inputTitle}
+            value={title}
+          />
         </div>
         <div className="form-control">
           <label>Amount value</label>
@@ -23,6 +40,7 @@ const FormComponent = () => {
             type="number"
             placeholder="(+ Income , - Pay)"
             onChange={inputAmount}
+            value={amount}
           />
         </div>
         <div>
