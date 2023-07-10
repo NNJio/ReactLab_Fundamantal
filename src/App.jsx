@@ -1,21 +1,35 @@
 import "./App.css";
 import Transaction from "./components/Transaction";
 import FormComponent from "./components/FormComponent";
+import { useState } from "react";
+
 const design = { color: "red", textAlign: "center", fontSize: "1.5rem" };
 const Title = () => <h1 style={design}>App Bill Account</h1>;
-const Descripiton = () => (
-  <p style={{ textAlign: "center", fontSize: "0.8 rem" }}>
-    Your account log daily{" "}
-  </p>
-);
+// const Descripiton = () => (
+//   <p style={{ textAlign: "center", fontSize: "0.8 rem" }}>
+//     Your account log daily{" "}
+//   </p>
+// );
 
 function App() {
+  const initData = [
+    { id: 1, title: "Hopitel Bill", amount: 2000 },
+    { id: 2, title: "Salary", amount: 50000 },
+    { id: 3, title: "Tarvil", amount: 500 },
+  ];
+  const [items, setItems] = useState([]);
+  const onAddNewItem = (newItem) => {
+    // console.log("tttttttt", newItem);
+    setItems((prevItem) => {
+      return [newItem, ...prevItem];
+    });
+  };
   return (
     <div className="container">
       <Title />
-      <FormComponent />
-      <Descripiton />
-      <Transaction />
+      <FormComponent onAddItem={onAddNewItem} />
+      {/* <Descripiton /> */}
+      <Transaction items={items} />
     </div>
   );
 }
