@@ -1,5 +1,6 @@
 import "./App.css";
 import Transaction from "./components/Transaction";
+import FormComponent from "./components/FormComponent";
 const design = { color: "red", textAlign: "center", fontSize: "1.5rem" };
 const Title = () => <h1 style={design}>App Bill Account</h1>;
 const Descripiton = () => (
@@ -10,8 +11,9 @@ const Descripiton = () => (
 
 function App() {
   return (
-    <div className="container" >
+    <div className="container">
       <Title />
+      <FormComponent />
       <Descripiton />
       <Transaction />
     </div>
