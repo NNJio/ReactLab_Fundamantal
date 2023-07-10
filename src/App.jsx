@@ -12,11 +12,6 @@ const Title = () => <h1 style={design}>App Bill Account</h1>;
 // );
 
 function App() {
-  const initData = [
-    { id: 1, title: "Hopitel Bill", amount: 2000 },
-    { id: 2, title: "Salary", amount: 50000 },
-    { id: 3, title: "Tarvil", amount: 500 },
-  ];
   const [items, setItems] = useState([]);
   const onAddNewItem = (newItem) => {
     // console.log("tttttttt", newItem);
