@@ -2,6 +2,7 @@ import "./App.css";
 import Transaction from "./components/Transaction";
 import FormComponent from "./components/FormComponent";
 import { useState } from "react";
+import DataContext from "./data/DataCcontext";
 
 const design = { color: "red", textAlign: "center", fontSize: "1.5rem" };
 const Title = () => <h1 style={design}>App Bill Account</h1>;
@@ -20,12 +21,14 @@ function App() {
     });
   };
   return (
-    <div className="container">
-      <Title />
-      <FormComponent onAddItem={onAddNewItem} />
-      {/* <Descripiton /> */}
-      <Transaction items={items} />
-    </div>
+    <DataContext.Provider value="nnjio">
+      <div className="container">
+        <Title />
+        <FormComponent onAddItem={onAddNewItem} />
+        {/* <Descripiton /> */}
+        <Transaction items={items} />
+      </div>
+    </DataContext.Provider>
   );
 }
 
