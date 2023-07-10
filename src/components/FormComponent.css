@@ -17,7 +17,7 @@ input {
   width: 100%;
 }
 .btn {
-  color: #fff;
+  /* color: #fff; */
   cursor: pointer;
   display: block;
   margin: 10px 0 1px;
