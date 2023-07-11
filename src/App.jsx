@@ -3,6 +3,8 @@ import Transaction from "./components/Transaction";
 import FormComponent from "./components/FormComponent";
 import { useState } from "react";
 import DataContext from "./data/DataCcontext";
+import ReportComponent from "./components/ReportComponent";
+
 
 const design = { color: "red", textAlign: "center", fontSize: "1.5rem" };
 const Title = () => <h1 style={design}>App Bill Account</h1>;
@@ -21,9 +23,11 @@ function App() {
     });
   };
   return (
-    <DataContext.Provider value="nnjio">
+    <DataContext.Provider value="NNJio">
       <div className="container">
+       
         <Title />
+        <ReportComponent/>
         <FormComponent onAddItem={onAddNewItem} />
         {/* <Descripiton /> */}
         <Transaction items={items} />
